@@ -40,11 +40,25 @@ int main()
 	// Init state machine.
 	stateMachine->Initialize();
 
+	// Create root console.
+	TCODConsole::initRoot(80, 50, "S. O. D. A", false);
+
 	// Main Loop
-	while (stateMachine->Running())
+	while (stateMachine->Running() && !TCODConsole::isWindowClosed())
 	{
-		stateMachine->Update();
+		// Get deltaTime!
+		float deltaTime = TCODSystem::getLastFrameLength();
+
+		// Clear root console.
+		TCODConsole::root->clear();
+
+		// Add menu state.
+
+		stateMachine->Update(deltaTime);
 		stateMachine->Render();
+
+		// Flip root console frame buffer.
+		TCODConsole::flush();
 	}
 
 	// End

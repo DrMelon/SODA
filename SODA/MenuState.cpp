@@ -4,6 +4,12 @@
 
 #include "MenuState.h"
 
+MenuState::MenuState(StateMachine* parent)
+{
+	// Set parent state machine.
+	myParent = parent;
+}
+
 void MenuState::Initialize()
 {
 	// Init menu.
