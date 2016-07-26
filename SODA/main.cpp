@@ -18,5 +18,37 @@
 //  ------------------------------------------------------------------------------------------------
 //  ------------------------------------------------------------------------------------------------
 //
+//  Source Code, Ver. 0.0.1: July 2016
+//  Dependencies: libtcod
+// 
 //
-//
+
+#include <libtcod/libtcod.hpp>
+#include <memory>
+
+
+#include "StateMachine.h"
+
+// Application Entry Point: Here we kick off the state machine.
+
+
+int main()
+{
+	// Create state machine.
+	std::shared_ptr<StateMachine> stateMachine = std::make_shared<StateMachine>();
+
+	// Init state machine.
+	stateMachine->Initialize();
+
+	// Main Loop
+	while (stateMachine->Running())
+	{
+		stateMachine->Update();
+		stateMachine->Render();
+	}
+
+	// End
+	
+
+	return 0;
+}
