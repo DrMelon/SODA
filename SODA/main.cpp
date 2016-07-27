@@ -25,23 +25,29 @@
 
 #include <libtcod/libtcod.hpp>
 #include <memory>
-
+#include "SodaEvent.h"
 
 #include "StateMachine.h"
+#include "MenuState.h"
 
 // Application Entry Point: Here we kick off the state machine.
 
+#define CON_WIDTH 160
+#define CON_HEIGHT 100
 
 int main()
 {
 	// Create state machine.
-	std::shared_ptr<StateMachine> stateMachine = std::make_shared<StateMachine>();
+	std::shared_ptr<SODA::StateMachine> stateMachine = std::make_shared<SODA::StateMachine>();
 
 	// Init state machine.
 	stateMachine->Initialize();
 
 	// Create root console.
-	TCODConsole::initRoot(80, 50, "S. O. D. A", false);
+	TCODConsole::initRoot(CON_WIDTH, CON_HEIGHT, "S. O. D. A", false);
+
+	// Create menu state.
+	stateMachine->AddState(new SODA::MenuState(stateMachine.get()));
 
 	// Main Loop
 	while (stateMachine->Running() && !TCODConsole::isWindowClosed())
@@ -52,7 +58,8 @@ int main()
 		// Clear root console.
 		TCODConsole::root->clear();
 
-		// Add menu state.
+		// Check for events
+		TCODSystem::checkForEvent(TCOD_EVENT_ANY, &stateMachine->currentEvent.Key, &stateMachine->currentEvent.Mouse);
 
 		stateMachine->Update(deltaTime);
 		stateMachine->Render();

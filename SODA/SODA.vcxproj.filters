@@ -8,13 +8,13 @@
     <Filter Include="Source Files\StateMachine">
       <UniqueIdentifier>{8bba3312-ec27-4cf6-b983-92c48bfdf0af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Events">
+      <UniqueIdentifier>{dcefa1ff-f591-44a4-a6e4-ec3e9c36ae3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuState.h">
-      <Filter>Source Files\StateMachine</Filter>
     </ClCompile>
     <ClCompile Include="MenuState.cpp">
       <Filter>Source Files\StateMachine</Filter>
@@ -24,10 +24,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StateMachine.h">
-      <Filter>Source Files\StateMachine</Filter>
+    <ClInclude Include="SodaEvent.h">
+      <Filter>Source Files\Events</Filter>
     </ClInclude>
     <ClInclude Include="IState.h">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
       <Filter>Source Files\StateMachine</Filter>
     </ClInclude>
   </ItemGroup>

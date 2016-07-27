@@ -91,6 +91,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,11 +152,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
-    <ClCompile Include="MenuState.h" />
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IState.h" />
+    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="SodaEvent.h" />
     <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
