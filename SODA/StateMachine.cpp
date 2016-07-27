@@ -105,4 +105,14 @@ namespace SODA
 		return nullptr;
 	}
 
+	IState* StateMachine::CurrentState()
+	{
+		if (!stateStack.empty())
+		{
+			return stateStack.top();
+		}
+
+		return nullptr;
+	}
+
 }

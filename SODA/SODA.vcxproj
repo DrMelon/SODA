@@ -150,11 +150,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EffectRainbowLine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EffectRainbowLine.h" />
+    <ClInclude Include="IEffect.h" />
     <ClInclude Include="IState.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="SodaEvent.h" />

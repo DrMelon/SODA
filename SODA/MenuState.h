@@ -10,10 +10,10 @@
 
 #include "IState.h"
 #include "StateMachine.h"
+#include "EffectRainbowLine.h"
 
 namespace SODA
 {
-
 	static const int MENU_CON_WIDTH = 160;
 	static const int MENU_CON_HEIGHT = 100;
 
@@ -39,6 +39,8 @@ namespace SODA
 
 		private:
 			void DrawTitle();
+
+			EffectRainbowLine* rainbowLine;
 
 	};
 

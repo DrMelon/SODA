@@ -34,6 +34,7 @@ namespace SODA
 		void AddState(IState* newState);
 		IState* PopState();
 		void SwitchState(IState* newState);
+		IState* CurrentState();
 
 		TCODConsole* stateMachineConsole = nullptr;
 		SODA::Event currentEvent;

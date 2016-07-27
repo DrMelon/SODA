@@ -18,6 +18,7 @@ namespace SODA
 	void MenuState::Initialize()
 	{
 		// Init menu.
+		rainbowLine = new EffectRainbowLine((MENU_CON_HEIGHT / 6) + 8, 0.0f, 150.0f);
 	}
 
 	void MenuState::Render()
@@ -27,6 +28,7 @@ namespace SODA
 
 		// Draw on it
 		DrawTitle();
+		rainbowLine->DrawEffect(menuConsole.get());
 
 		// Blit to state machine console
 		TCODConsole::blit(menuConsole.get(), 0, 0, MENU_CON_WIDTH, MENU_CON_HEIGHT, myParent->stateMachineConsole, 0, 0);
@@ -34,7 +36,14 @@ namespace SODA
 
 	void MenuState::Update(float deltaTime, SODA::Event currentEvent)
 	{
+		// TODO: actually have a menu
+		if (currentEvent.Key.pressed && currentEvent.Key.vk == TCODK_ENTER)
+		{
+			
+		}
 
+		// Update rainbowline
+		rainbowLine->UpdateEffect(deltaTime);
 	}
 
 	void MenuState::OnPause()

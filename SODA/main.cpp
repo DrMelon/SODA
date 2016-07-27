@@ -48,6 +48,7 @@ int main()
 
 	// Create menu state.
 	stateMachine->AddState(new SODA::MenuState(stateMachine.get()));
+	stateMachine->CurrentState()->Initialize();
 
 	// Main Loop
 	while (stateMachine->Running() && !TCODConsole::isWindowClosed())

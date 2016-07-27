@@ -11,6 +11,9 @@
     <Filter Include="Source Files\Events">
       <UniqueIdentifier>{dcefa1ff-f591-44a4-a6e4-ec3e9c36ae3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Effects">
+      <UniqueIdentifier>{e1b9e2f7-3123-4065-810f-d2864a398390}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,6 +24,9 @@
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
       <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectRainbowLine.cpp">
+      <Filter>Source Files\Effects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +41,12 @@
     </ClInclude>
     <ClInclude Include="StateMachine.h">
       <Filter>Source Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffect.h">
+      <Filter>Source Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectRainbowLine.h">
+      <Filter>Source Files\Effects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
