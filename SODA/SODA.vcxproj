@@ -151,17 +151,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EffectRainbowLine.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="PlayState.cpp" />
+    <ClCompile Include="SpacePlayer.cpp" />
     <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="VectorMath.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EffectRainbowLine.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="IEffect.h" />
     <ClInclude Include="IState.h" />
     <ClInclude Include="MenuState.h" />
+    <ClInclude Include="PlayState.h" />
     <ClInclude Include="SodaEvent.h" />
+    <ClInclude Include="SpacePlayer.h" />
     <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="VectorMath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

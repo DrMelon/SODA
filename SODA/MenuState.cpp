@@ -3,6 +3,7 @@
 // 2016
 
 #include "MenuState.h"
+#include "PlayState.h"
 
 namespace SODA
 {
@@ -39,7 +40,7 @@ namespace SODA
 		// TODO: actually have a menu
 		if (currentEvent.Key.pressed && currentEvent.Key.vk == TCODK_ENTER)
 		{
-			
+			myParent->AddState(new PlayState(myParent));
 		}
 
 		// Update rainbowline

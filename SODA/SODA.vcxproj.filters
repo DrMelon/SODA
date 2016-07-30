@@ -14,6 +14,15 @@
     <Filter Include="Source Files\Effects">
       <UniqueIdentifier>{e1b9e2f7-3123-4065-810f-d2864a398390}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{b15eef16-1df8-46ae-b646-79991e388ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Space">
+      <UniqueIdentifier>{5c49a41c-33f8-4667-b196-4f4e4aa416be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{398b0144-e4d7-4742-ad06-10f2f0e3fe47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,6 +36,18 @@
     </ClCompile>
     <ClCompile Include="EffectRainbowLine.cpp">
       <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorMath.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="SpacePlayer.cpp">
+      <Filter>Source Files\Entities\Space</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +68,18 @@
     </ClInclude>
     <ClInclude Include="EffectRainbowLine.h">
       <Filter>Source Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="SpacePlayer.h">
+      <Filter>Source Files\Entities\Space</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorMath.h">
+      <Filter>Source Files\Util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
