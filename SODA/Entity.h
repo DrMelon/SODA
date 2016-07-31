@@ -40,6 +40,9 @@ namespace SODA
 
 			virtual void AddChild(std::shared_ptr<Entity> newChild);
 
+			virtual void UpdateChildren(float deltaTime, SODA::Event currentEvent);
+			virtual void RenderChildren(TCODConsole* console);
+
 		private:
 			std::vector<std::shared_ptr<Entity>> children;
 

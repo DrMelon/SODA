@@ -23,6 +23,9 @@
     <Filter Include="Source Files\Util">
       <UniqueIdentifier>{398b0144-e4d7-4742-ad06-10f2f0e3fe47}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Entities\Game Logic">
+      <UniqueIdentifier>{f66a556e-af29-4ce5-8e82-47912543d26f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="SpacePlayer.cpp">
       <Filter>Source Files\Entities\Space</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\Entities\Game Logic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="VectorMath.h">
       <Filter>Source Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Source Files\Entities\Game Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

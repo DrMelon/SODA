@@ -30,4 +30,20 @@ namespace SODA
 	{
 		children.push_back(newChild);
 	}
+
+	void Entity::UpdateChildren(float deltaTime, SODA::Event currentEvent)
+	{
+		for (auto ent : children)
+		{
+			ent->Update(deltaTime, currentEvent);
+		}
+	}
+
+	void Entity::RenderChildren(TCODConsole* console)
+	{
+		for (auto ent : children)
+		{
+			ent->Render(console);
+		}
+	}
 }
